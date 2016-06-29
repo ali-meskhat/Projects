@@ -23,13 +23,19 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="client" />
+      </profile>
+      <profile default="false" name="Annotation profile for service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="client" target="1.5" />
       <module name="mtom-spring-ws" target="1.5" />
-      <module name="service" target="1.5" />
+      <module name="service" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

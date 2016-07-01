@@ -5,71 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b810c1d6-83d4-467e-b2b4-ea1de68dbe24" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/classes/nl/rabobank/ws/client/PersonServiceClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/client-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/surefire-reports/TEST-nl.rabobank.ws.client.PersonServiceClientTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/surefire-reports/nl.rabobank.ws.client.PersonServiceClientTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/test-classes/jetty-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/test-classes/nl/rabobank/ws/client/PersonServiceClientTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/test-classes/spring-ws-client-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/target/test-classes/ws.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/src/main/java/META-INF/sun-jaxb.episode" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/src/main/java/nl/rabobank/mtom/ws/generated/GetPersonsRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/src/main/java/nl/rabobank/mtom/ws/generated/ObjectFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/src/main/java/nl/rabobank/mtom/ws/generated/Person.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/src/main/java/nl/rabobank/mtom/ws/generated/PersonResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/src/main/java/nl/rabobank/mtom/ws/generated/package-info.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/classes/META-INF/sun-jaxb.episode" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/classes/nl/rabobank/mtom/ws/generated/GetPersonsRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/classes/nl/rabobank/mtom/ws/generated/ObjectFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/classes/nl/rabobank/mtom/ws/generated/Person.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/classes/nl/rabobank/mtom/ws/generated/PersonResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/classes/nl/rabobank/mtom/ws/generated/package-info.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/generated-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/classes/nl/rabobank/mtom/ws/service/PersonService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/classes/nl/rabobank/mtom/ws/service/endpoint/PersonEndPoint.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/classes/spring-ws-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/classes/xsd/person.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/service-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/surefire-reports/TEST-nl.rabobank.ws.service.PersonServiceTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/surefire-reports/nl.rabobank.ws.service.PersonServiceTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/target/test-classes/nl/rabobank/ws/service/PersonServiceTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stubs/target/classes/nl/rabobank/mtom/ws/stub/PersonGenerator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stubs/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stubs/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stubs/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stubs/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stubs/target/stubs-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/client.iml" afterPath="$PROJECT_DIR$/client/client.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/test/resources/jetty-context.xml" afterPath="$PROJECT_DIR$/client/src/test/resources/jetty-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/generated.iml" afterPath="$PROJECT_DIR$/generated/generated.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/xsd/person.xsd" afterPath="$PROJECT_DIR$/generated/src/main/xsd/person.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mtom-spring-ws.iml" afterPath="$PROJECT_DIR$/mtom-spring-ws.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/service.iml" afterPath="$PROJECT_DIR$/service/service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/nl/rabobank/mtom/ws/service/PersonService.java" afterPath="$PROJECT_DIR$/service/src/main/java/nl/rabobank/mtom/ws/service/PersonService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/nl/rabobank/mtom/ws/service/endpoint/PersonEndPoint.java" afterPath="$PROJECT_DIR$/service/src/main/java/nl/rabobank/mtom/ws/service/endpoint/PersonEndPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/resources/xsd/person.xsd" afterPath="$PROJECT_DIR$/service/src/main/resources/xsd/person.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/test/java/nl/rabobank/ws/service/PersonServiceTest.java" afterPath="$PROJECT_DIR$/service/src/test/java/nl/rabobank/ws/service/PersonServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stubs/src/main/java/nl/rabobank/mtom/ws/stub/PersonGenerator.java" afterPath="$PROJECT_DIR$/stubs/src/main/java/nl/rabobank/mtom/ws/stub/PersonGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stubs/stubs.iml" afterPath="$PROJECT_DIR$/stubs/stubs.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/main/java/nl/rabobank/ws/client/PersonServiceClient.java" afterPath="$PROJECT_DIR$/client/src/main/java/nl/rabobank/ws/client/GetPersonServiceClient.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/test/java/nl/rabobank/ws/client/PersonServiceClientTest.java" afterPath="$PROJECT_DIR$/client/src/test/java/nl/rabobank/ws/client/GetPersonServiceClientTest.java" />
     </list>
     <ignored path="mtom-spring-ws.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1662,7 +1598,7 @@
       <workItem from="1467178004571" duration="29863000" />
       <workItem from="1467263621613" duration="27742000" />
       <workItem from="1467298947220" duration="2083000" />
-      <workItem from="1467349415384" duration="20813000" />
+      <workItem from="1467349415384" duration="20824000" />
     </task>
     <task id="LOCAL-00001" summary="Added:&#10;- stub &amp; generator&#10;- tests">
       <created>1467356086599</created>
@@ -1688,7 +1624,13 @@
       <option name="project" value="LOCAL" />
       <updated>1467373953436</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="import-personBatch: Added new xsds for importing functionality&#10;">
+      <created>1467373965978</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1467373965978</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1724,7 +1666,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95163000" />
+    <option name="totallyTimeSpent" value="95174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />

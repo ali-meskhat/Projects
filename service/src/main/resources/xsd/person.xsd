@@ -1,12 +1,12 @@
-
 <xsd:schema xmlns="http://www.rabobank.nl/person/schema/beans"
             targetNamespace="http://www.rabobank.nl/person/schema/beans"
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
 
     <xsd:element name="get-persons-request">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="name" type="xsd:string" />
+                <xsd:element name="name" type="xsd:string"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -22,9 +22,18 @@
 
     <xsd:complexType name="person">
         <xsd:sequence>
-            <xsd:element name="id" type="xsd:int" />
-            <xsd:element name="first-name" type="xsd:string" />
-            <xsd:element name="last-name" type="xsd:string" />
+            <xsd:element name="id" type="xsd:int"/>
+            <xsd:element name="first-name" type="xsd:string"/>
+            <xsd:element name="last-name" type="xsd:string"/>
+            <xsd:element name="Image">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Title" type="xsd:string"/>
+                        <xsd:element name="ImageData" type="xsd:base64Binary"
+                                     xmime:expectedContentTypes="application/octet-strem"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 

@@ -16,13 +16,13 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 public class PersonEndPoint implements PersonService {
     private static org.slf4j.Logger LOG = LoggerFactory.getLogger(PersonService.class);
 
-     /**
+    /**
      * Gets person list.
      */
     @PayloadRoot(localPart = GET_PERSONS_REQUEST, namespace = NAMESPACE)
     public PersonResponse getPersons(GetPersonsRequest request) {
 
-        LOG.info("getPesrons: request [{}]" + request);
+        LOG.info("getPersons: request [{}]" + request);
         return PersonGenerator.generatePerson(request);
     }
 }

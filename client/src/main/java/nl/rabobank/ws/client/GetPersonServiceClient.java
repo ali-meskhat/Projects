@@ -13,9 +13,9 @@ import org.springframework.ws.client.core.WebServiceTemplate;
  * Created by ame21103 on 29-6-2016.
  */
 @Component
-public class PersonServiceClient {
+public class GetPersonServiceClient {
 
-    private static Logger LOG = LoggerFactory.getLogger(PersonServiceClient.class);
+    private static Logger LOG = LoggerFactory.getLogger(GetPersonServiceClient.class);
 
     @Autowired
     private WebServiceTemplate webServiceTemplate;
@@ -23,7 +23,7 @@ public class PersonServiceClient {
     /**
      * Gets person list.
      */
-    public PersonServiceClient() {
+    public GetPersonServiceClient() {
     }
 
     public PersonResponse getPersons(GetPersonsRequest request) {

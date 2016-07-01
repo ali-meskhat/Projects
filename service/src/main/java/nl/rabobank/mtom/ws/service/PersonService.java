@@ -3,12 +3,10 @@ package nl.rabobank.mtom.ws.service;
 
 import nl.rabobank.mtom.ws.generated.PersonResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * Created by ame21103 on 28-6-2016.
  */
+
 public interface PersonService {
 
     String NAMESPACE = "http://www.rabobank.nl/person/schema/beans";

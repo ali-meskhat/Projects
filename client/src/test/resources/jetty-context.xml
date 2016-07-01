@@ -10,9 +10,6 @@
 
     <context:property-placeholder location="ws.properties"/>
 
-    <bean class="nl.rabobank.mtom.ws.generated.Person"
-          p:id="1" p:firstName="Joe" p:lastName="Last Name" />
-
     <bean id="jettyServer"
           class="org.mortbay.jetty.Server"
           init-method="start" destroy-method="stop">

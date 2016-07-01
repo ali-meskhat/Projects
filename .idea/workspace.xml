@@ -1662,7 +1662,7 @@
       <workItem from="1467178004571" duration="29863000" />
       <workItem from="1467263621613" duration="27742000" />
       <workItem from="1467298947220" duration="2083000" />
-      <workItem from="1467349415384" duration="20803000" />
+      <workItem from="1467349415384" duration="20813000" />
     </task>
     <task id="LOCAL-00001" summary="Added:&#10;- stub &amp; generator&#10;- tests">
       <created>1467356086599</created>
@@ -1682,7 +1682,13 @@
       <option name="project" value="LOCAL" />
       <updated>1467373936288</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="import-personBatch: Added new xsds for importing functionality&#10;">
+      <created>1467373953436</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1467373953436</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1718,7 +1724,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95153000" />
+    <option name="totallyTimeSpent" value="95163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />

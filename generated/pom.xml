@@ -50,12 +50,11 @@
                     <generatePackage>nl.rabobank.mtom.ws.generated</generatePackage>
                     <args>
                         <arg>-Xfluent-api</arg>
-
                         <arg>-Xequals</arg>
                         <arg>-XhashCode</arg>
                     </args>
                     <schemaDirectory>src/main/xsd</schemaDirectory>
-                    <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
+                    <generateDirectory>${project.basedir}/src/main/java/</generateDirectory>
                     <plugins>
                         <plugin>
                             <groupId>org.jvnet.jaxb2_commons</groupId>

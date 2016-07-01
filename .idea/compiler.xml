@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="client" />
+        <module name="stubs" />
       </profile>
       <profile default="false" name="Annotation profile for service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -31,11 +32,27 @@
         <processorPath useClasspath="true" />
         <module name="service" />
       </profile>
+      <profile default="false" name="Annotation profile for generated" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="generated" />
+      </profile>
+      <profile default="false" name="Annotation profile for stub" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="client" target="1.5" />
+      <module name="generated" target="1.7" />
       <module name="mtom-spring-ws" target="1.5" />
       <module name="service" target="1.7" />
+      <module name="stub" target="1.7" />
+      <module name="stubs" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

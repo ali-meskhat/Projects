@@ -12,13 +12,13 @@
 
     <bean id="person" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
           p:portTypeName="Person"
-          p:locationUri="/personService/"
+          p:locationUri="/importFile/"
           p:requestSuffix="-request"
           p:responseSuffix="-response">
 
         <property name="schema">
             <bean class="org.springframework.xml.xsd.SimpleXsdSchema"
-                  p:xsd="classpath:/xsd/person.xsd"/>
+                  p:xsd="classpath:/xsd/importFile.xsd"/>
         </property>
     </bean>
 
@@ -35,6 +35,5 @@
     <bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller"
           p:contextPath="nl.rabobank.mtom.ws.generated"
           p:mtomEnabled="true"/>
-
 
 </beans>

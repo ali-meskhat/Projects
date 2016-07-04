@@ -1,12 +1,23 @@
 package nl.rabobank.ws.client;
 
+import java.awt.image.BufferedImage;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.activation.DataHandler;
+import javax.imageio.ImageIO;
 
 import nl.rabobank.mtom.ws.generated.ImportFileRequest;
 import nl.rabobank.mtom.ws.generated.ImportFileResponse;
 import nl.rabobank.mtom.ws.generated.Person;
 import nl.rabobank.mtom.ws.generated.PersonBatch;
+import nl.rabobank.mtom.ws.generated.Picture;
 import nl.rabobank.mtom.ws.generated.Result;
 
 import org.junit.Assert;
@@ -36,13 +47,19 @@ public class ImportPersonBatchServiceClientTest {
     private ImportPersonBatchServiceClient importPersonBatchServiceClient;
 
     @Before
-    public void before() {
+    public void before() throws IOException {
+
+        final File imagFile = new File("src\\test\\resources\\IMG_9720.JPG");
+        final byte[] imageData = Files.readAllBytes(imagFile.toPath());
+
+        final Picture picture =
+                new Picture().withImageData(new DataHandler(imageData, "application/octet-stream")).withTitle("mo");
 
         request = new ImportFileRequest();
         response = new ImportFileResponse();
 
-        Person joseph = new Person().withFirstName("Josph").withLastName("K").withId(0);
-        Person M = new Person().withFirstName("M").withLastName("L").withId(1);
+        Person joseph = new Person().withFirstName("Josph").withLastName("K").withId(0).withPicture(picture);
+        Person M = new Person().withFirstName("M").withLastName("L").withId(1).withPicture(picture);
 
         List<Person> persons = new ArrayList<>();
 
@@ -51,7 +68,7 @@ public class ImportPersonBatchServiceClientTest {
 
         PersonBatch personBatch = new PersonBatch().withPersons(persons);
 
-        request.withPerson(personBatch);
+        request.withPersonBatch(personBatch);
 
         List<Result> results = new ArrayList<>();
 
@@ -59,8 +76,9 @@ public class ImportPersonBatchServiceClientTest {
         Result result2 = new Result();
 
         result1.setKey(joseph.getId());
-        result1.setValue("success");
         result2.setKey(M.getId());
+
+        result1.setValue("success");
         result2.setValue("success");
 
         results.add(result1);
@@ -70,8 +88,9 @@ public class ImportPersonBatchServiceClientTest {
     }
 
     @Test
-    public void testResponse() {
+    public void testResponse() throws InterruptedException {
         Assert.assertEquals(response, importPersonBatchServiceClient.importBatch(request));
+
     }
 
 }

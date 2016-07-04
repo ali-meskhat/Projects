@@ -7,7 +7,7 @@
     <xsd:element name="import-file-request">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="person" type="personBatch"/>
+                <xsd:element name="personBatch" type="personBatch"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
@@ -30,8 +30,7 @@
 
     <xsd:complexType name="personBatch">
         <xsd:sequence>
-            <xsd:element name="persons" type="person" minOccurs="0" maxOccurs="unbounded"
-                         xmime:expectedContentTypes="application/octet-stream"/>
+            <xsd:element name="persons" type="person" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
 

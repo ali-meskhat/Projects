@@ -3,7 +3,7 @@ package nl.rabobank.mtom.ws.service.endpoint;
 import nl.rabobank.mtom.ws.generated.ImportFileRequest;
 import nl.rabobank.mtom.ws.generated.ImportFileResponse;
 import nl.rabobank.mtom.ws.service.ImportPersonBatchService;
-import nl.rabobank.mtom.ws.stub.ImportStatusGenerator;
+import nl.rabobank.mtom.ws.stub.ImportResultGenerator;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -22,6 +22,8 @@ public class ImportPersonBatchEndPoint implements ImportPersonBatchService {
     @PayloadRoot(localPart = GET_PERSONS_REQUEST, namespace = NAMESPACE)
     public ImportFileResponse getImportResults(ImportFileRequest request) {
         LOG.info("getImportResults: request [{}]" + request);
-        return ImportStatusGenerator.generateImportResult(request);
+        ImportResultGenerator resultGenerator = new ImportResultGenerator();
+
+        return resultGenerator.getImportResult(request);
     }
 }

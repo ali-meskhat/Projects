@@ -13,6 +13,7 @@
     <bean id="jettyServer"
           class="org.mortbay.jetty.Server"
           init-method="start" destroy-method="stop">
+
         <property name="threadPool">
             <bean id="ThreadPool"
                   class="org.mortbay.thread.concurrent.ThreadPool">
@@ -36,6 +37,7 @@
                     <property name="sessionHandler">
                         <bean class="org.mortbay.jetty.servlet.SessionHandler" />
                     </property>
+
                     <property name="servletHandler">
                         <bean class="org.mortbay.jetty.servlet.ServletHandler">
                             <property name="servlets">
@@ -43,7 +45,8 @@
                                     <bean class="org.mortbay.jetty.servlet.ServletHolder"
                                           p:name="spring-ws">
                                         <property name="servlet">
-                                            <bean class="org.springframework.ws.transport.http.MessageDispatcherServlet" />
+                                            <bean class="org.springframework.ws.transport.http.MessageDispatcherServlet" p:messageFactoryBeanName=""/>
+
                                         </property>
                                         <property name="initParameters">
                                             <map>
@@ -57,7 +60,8 @@
                                 <list>
                                     <bean class="org.mortbay.jetty.servlet.ServletMapping"
                                           p:servletName="spring-ws"
-                                          p:pathSpec="/*" />
+                                            p:pathSpec="/*"
+                                    />
                                 </list>
                             </property>
                         </bean>
@@ -68,5 +72,6 @@
             </list>
         </property>
     </bean>
+
 
 </beans>

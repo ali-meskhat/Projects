@@ -29,6 +29,7 @@ public class ImportPersonBatchServiceClient {
     public ImportFileResponse importBatch(ImportFileRequest request) {
 
         ImportFileResponse response = (ImportFileResponse) webServiceTemplate.marshalSendAndReceive(request);
+
         LOG.debug("Response [{}]: " + response.getResults().toString());
         return response;
     }

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.rabobank.nl/import/schema/beans"
             targetNamespace="http://www.rabobank.nl/import/schema/beans"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -12,19 +13,25 @@
         </xsd:complexType>
     </xsd:element>
 
+
     <xsd:element name="import-file-response">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="status" type="xsd:string"
-                             minOccurs="0" maxOccurs="unbounded"/>
+                <xsd:element name="results" type="result" minOccurs="0" maxOccurs="unbounded"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
 
+    <xsd:complexType name="result">
+        <xsd:sequence>
+            <xsd:element type="xsd:int" name="key"/>
+            <xsd:element type="xsd:string" name="value"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
     <xsd:complexType name="personBatch">
         <xsd:sequence>
-            <xsd:element name="persons" type="person" minOccurs="0" maxOccurs="unbounded"
-                         xmime:expectedContentTypes="application/octet-stream"/>
+            <xsd:element name="persons" type="person" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -40,8 +47,7 @@
     <xsd:complexType name="picture">
         <xsd:sequence>
             <xsd:element name="title" type="xsd:string"/>
-            <xsd:element name="imageData" type="xsd:base64Binary"
-                         xmime:expectedContentTypes="application/octet-stream"/>
+            <xsd:element name="imageData" type="xsd:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
         </xsd:sequence>
     </xsd:complexType>
 

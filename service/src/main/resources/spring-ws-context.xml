@@ -24,7 +24,12 @@
 
 
     <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping">
-        <description>An endpoint mapping strategy that looks for @Endpoint and @PayloadRoot annotations.</description>
+        <!--<property name="interceptors">-->
+            <!--<list>-->
+                <!--<ref bean="loggingInterceptor"/>-->
+                <!--<ref bean="soapEnvelopeInterceptor"/>-->
+            <!--</list>-->
+        <!--</property>-->
     </bean>
 
     <bean class="org.springframework.ws.server.endpoint.adapter.MarshallingMethodEndpointAdapter">
@@ -35,5 +40,21 @@
     <bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller"
           p:contextPath="nl.rabobank.mtom.ws.generated"
           p:mtomEnabled="true"/>
+
+    <!--<bean id="loggingInterceptor" class="org.springframework.ws.server.endpoint.interceptor.PayloadLoggingInterceptor">-->
+        <!--<property name="logRequest" value="true"/>-->
+        <!--<property name="logResponse" value="true"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="soapEnvelopeInterceptor"-->
+          <!--class="org.springframework.ws.soap.server.endpoint.interceptor.SoapEnvelopeLoggingInterceptor">-->
+        <!--<property name="logRequest" value="true"/>-->
+        <!--<property name="logResponse" value="true"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="messageFactory"-->
+          <!--class="org.springframework.ws.soap.axiom.AxiomSoapMessageFactory">-->
+        <!--<property name="payloadCaching" value="true" />-->
+    <!--</bean>-->
 
 </beans>

@@ -18,7 +18,7 @@ import nl.rabobank.mtom.ws.generated.Result;
 /**
  * Created by ame21103 on 29-6-2016.
  */
-public class ImportStatusGenerator {
+public class ImportResultGenerator {
 
     public static ImportFileResponse generateImportResult(ImportFileRequest request) {
 

@@ -10,9 +10,10 @@
 
     <context:component-scan base-package="nl.rabobank.mtom.ws"/>
 
-    <bean id="person" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
-          p:portTypeName="Person"
-          p:locationUri="/importFile/"
+
+    <bean id="personBatch" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+          p:portTypeName="personBatch"
+          p:locationUri="http://localhost:8888/importFile/"
           p:requestSuffix="-request"
           p:responseSuffix="-response">
 
@@ -24,37 +25,45 @@
 
 
     <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping">
-        <!--<property name="interceptors">-->
-            <!--<list>-->
+        <property name="interceptors">
+            <list>
+                <ref bean="wsSecurityInterceptor"/>
                 <!--<ref bean="loggingInterceptor"/>-->
                 <!--<ref bean="soapEnvelopeInterceptor"/>-->
-            <!--</list>-->
-        <!--</property>-->
+            </list>
+        </property>
     </bean>
 
-    <bean class="org.springframework.ws.server.endpoint.adapter.MarshallingMethodEndpointAdapter">
+    <bean class="org.springframework.ws.server.endpoint.adapter.method.MarshallingPayloadMethodProcessor">
         <description>Enables the MessageDispatchServlet to invoke methods requiring OXM marshalling.</description>
         <constructor-arg ref="marshaller"/>
+    </bean>
+
+
+    <bean id="loggingInterceptor" class="org.springframework.ws.server.endpoint.interceptor.PayloadLoggingInterceptor">
+        <property name="logRequest" value="true"/>
+        <property name="logResponse" value="true"/>
+    </bean>
+
+    <bean id="soapEnvelopeInterceptor"
+          class="org.springframework.ws.soap.server.endpoint.interceptor.SoapEnvelopeLoggingInterceptor">
+        <property name="logRequest" value="true"/>
+        <property name="logResponse" value="true"/>
+    </bean>
+
+    <bean id="wsSecurityInterceptor" class="org.springframework.ws.soap.security.wss4j2.Wss4jSecurityInterceptor">
+        <property name="validationActions" value="Signature"/>
+        <property name="validationSignatureCrypto">
+            <bean class="org.springframework.ws.soap.security.wss4j2.support.CryptoFactoryBean">
+                <property name="keyStorePassword" value="123456"/>
+                <property name="keyStoreLocation" value="classpath:/nl.rabobank.mtom.ws.service.config/keystore"/>
+
+            </bean>
+        </property>
     </bean>
 
     <bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller"
           p:contextPath="nl.rabobank.mtom.ws.generated"
           p:mtomEnabled="true"/>
-
-    <!--<bean id="loggingInterceptor" class="org.springframework.ws.server.endpoint.interceptor.PayloadLoggingInterceptor">-->
-        <!--<property name="logRequest" value="true"/>-->
-        <!--<property name="logResponse" value="true"/>-->
-    <!--</bean>-->
-
-    <!--<bean id="soapEnvelopeInterceptor"-->
-          <!--class="org.springframework.ws.soap.server.endpoint.interceptor.SoapEnvelopeLoggingInterceptor">-->
-        <!--<property name="logRequest" value="true"/>-->
-        <!--<property name="logResponse" value="true"/>-->
-    <!--</bean>-->
-
-    <!--<bean id="messageFactory"-->
-          <!--class="org.springframework.ws.soap.axiom.AxiomSoapMessageFactory">-->
-        <!--<property name="payloadCaching" value="true" />-->
-    <!--</bean>-->
 
 </beans>

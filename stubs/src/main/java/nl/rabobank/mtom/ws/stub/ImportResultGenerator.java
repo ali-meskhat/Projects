@@ -38,8 +38,9 @@ public class ImportResultGenerator {
 
     private List<Result> processRequest(ImportFileRequest request) {
 
-        FileOutputStream fileOutputStream;
+        FileOutputStream fileOutputStream =null;
         ArrayList<Result> results = new ArrayList<>();
+        ByteArrayInputStream byteArrayInputStream = null;
 
         PersonBatch personBatch = request.getPersonBatch();
         for (Person person : personBatch.getPersons()) {
@@ -50,7 +51,7 @@ public class ImportResultGenerator {
                 fileOutputStream = new FileOutputStream("output.JPG");
                 DataHandler dataHandler = person.getPicture().getImageData();
 
-                ByteArrayInputStream byteArrayInputStream = (ByteArrayInputStream) dataHandler.getContent();
+                byteArrayInputStream = (ByteArrayInputStream) dataHandler.getContent();
 
                 int count = byteArrayInputStream.read();
 
@@ -63,6 +64,14 @@ public class ImportResultGenerator {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
+            }finally {
+                try {
+                    fileOutputStream.close();
+                    byteArrayInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
             }
 
         }

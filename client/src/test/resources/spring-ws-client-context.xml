@@ -14,15 +14,35 @@
 
     <context:property-placeholder location="ws.properties"/>
 
-    <bean id="personWsTemplate" class="org.springframework.ws.client.core.WebServiceTemplate"
+    <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"/>
 
-          p:defaultUri="http://${ws.host}:${ws.port}/${ws.context.path}/personService"
-          p:marshaller-ref="marshaller"
-          p:unmarshaller-ref="marshaller"/>
+    <bean id="personWsTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory"/>
+        <property name="defaultUri" value="http://${ws.host}:${ws.port}/${ws.context.path}/personService"/>
+        <property name="marshaller" ref="marshaller"/>
+        <property name="unmarshaller" ref="marshaller"/>
+        <property name="interceptors">
+            <list>
+                <ref bean="wsSecurityInterceptor"/>
+            </list>
+        </property>
+
+    </bean>
 
     <bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller"
           p:contextPath="nl.rabobank.mtom.ws.generated"
           p:mtomEnabled="true"/>
 
+    <bean id="wsSecurityInterceptor" class="org.springframework.ws.soap.security.wss4j2.Wss4jSecurityInterceptor">
+        <property name="securementActions" value="Signature"/>
+        <property name="securementUsername" value="client"/>
+        <property name="securementPassword" value="123456"/>
+        <property name="securementSignatureCrypto">
+            <bean class="org.springframework.ws.soap.security.wss4j2.support.CryptoFactoryBean">
+                <property name="keyStorePassword" value="123456"/>
+                <property name="keyStoreLocation" value="classpath:/nl.rabobank.mtom.ws.service.config/keystore"/>
+            </bean>
+        </property>
+    </bean>
 
 </beans>

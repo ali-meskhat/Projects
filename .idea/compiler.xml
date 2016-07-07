@@ -51,6 +51,13 @@
         <processorPath useClasspath="true" />
         <module name="stubs" />
       </profile>
+      <profile default="false" name="Annotation profile for ultimate-strength" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ultimate-strength" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="client" target="1.7" />
@@ -59,6 +66,7 @@
       <module name="service" target="1.7" />
       <module name="stub" target="1.7" />
       <module name="stubs" target="1.7" />
+      <module name="ultimate-strength" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

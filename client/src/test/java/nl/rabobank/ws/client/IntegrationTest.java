@@ -38,7 +38,7 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:/spring-ws-client-context.xml" })
 
-public class ImportPersonBatchServiceClientTest {
+public class IntegrationTest {
 
     private ImportFileRequest request;
     private ImportFileResponse response;
@@ -49,17 +49,23 @@ public class ImportPersonBatchServiceClientTest {
     @Before
     public void before() throws IOException {
 
-        final File imagFile = new File("src\\test\\resources\\IMG_9720.JPG");
-        final byte[] imageData = Files.readAllBytes(imagFile.toPath());
+        final File imageFile = new File("src\\test\\resources\\IMG_9720.JPG");
+        final byte[] imageData = Files.readAllBytes(imageFile.toPath());
+
+
+        final File imageFile2 = new File("src\\test\\resources\\IMG_9720.JPG");
+        final byte[] imageData2 = Files.readAllBytes(imageFile2.toPath());
 
         final Picture picture =
-                new Picture().withImageData(new DataHandler(imageData, "application/octet-stream")).withTitle("mo");
+                new Picture().withImageData(new DataHandler(imageData, "application/octet-stream")).withTitle("Flowers");
+        final Picture picture2 =
+                new Picture().withImageData(new DataHandler(imageData2, "application/octet-stream")).withTitle("Cat");
 
         request = new ImportFileRequest();
         response = new ImportFileResponse();
 
         Person joseph = new Person().withFirstName("Josph").withLastName("K").withId(0).withPicture(picture);
-        Person M = new Person().withFirstName("M").withLastName("L").withId(1).withPicture(picture);
+        Person M = new Person().withFirstName("M").withLastName("L").withId(1).withPicture(picture2);
 
         List<Person> persons = new ArrayList<>();
 
